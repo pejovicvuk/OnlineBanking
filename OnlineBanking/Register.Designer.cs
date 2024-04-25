@@ -37,7 +37,7 @@
             textBoxRegisterPass = new TextBox();
             buttonRegister = new Button();
             textBoxRegisterEmail = new TextBox();
-            linkLabel1 = new LinkLabel();
+            labelRegister = new Label();
             SuspendLayout();
             // 
             // labelRegisterPass
@@ -114,22 +114,22 @@
             textBoxRegisterEmail.Size = new Size(100, 23);
             textBoxRegisterEmail.TabIndex = 9;
             // 
-            // linkLabel1
+            // labelRegister
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(560, 339);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(60, 15);
-            linkLabel1.TabIndex = 19;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "linkLabel1";
+            labelRegister.AutoSize = true;
+            labelRegister.Location = new Point(484, 269);
+            labelRegister.Name = "labelRegister";
+            labelRegister.Size = new Size(78, 30);
+            labelRegister.TabIndex = 18;
+            labelRegister.Text = "Imate nalog? \r\nUlogujte se";
+            labelRegister.Click += labelRegister_Click;
             // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(linkLabel1);
+            Controls.Add(labelRegister);
             Controls.Add(labelRegisterPass);
             Controls.Add(labelRegisterEmail);
             Controls.Add(labelRegisterPrezime);
@@ -156,6 +156,6 @@
         private TextBox textBoxRegisterPass;
         private Button buttonRegister;
         private TextBox textBoxRegisterEmail;
-        private LinkLabel linkLabel1;
+        private Label labelRegister;
     }
 }

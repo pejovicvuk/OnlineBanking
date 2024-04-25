@@ -41,9 +41,17 @@ namespace OnlineBanking
                 cmdInsert.Parameters.Add("@Sifra", SqlDbType.VarChar).Value = textBoxRegisterPass.Text;
                 cmdInsert.ExecuteNonQuery();
                 Home formahome = new Home();
+                this.Hide();
                 formahome.ShowDialog();
             }
             conn.Close();
+        }
+
+        private void labelRegister_Click(object sender, EventArgs e)
+        {
+            Login formalogin = new Login();
+            this.Hide();
+            formalogin.ShowDialog();
         }
     }
 }
