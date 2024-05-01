@@ -28,105 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxLoginEmail = new TextBox();
-            buttonLoginEmail = new Button();
-            textBoxLoginPass = new TextBox();
-            textBoxLoginPrezime = new TextBox();
-            textBoxLoginIme = new TextBox();
-            labelLoginIme = new Label();
-            labelLoginPrezime = new Label();
-            labelLoginEmail = new Label();
-            labelLoginPass = new Label();
+            textBoxRegisterEmail = new TextBox();
+            buttonRegisterEmail = new Button();
+            textBoxRegisterPass = new TextBox();
+            textBoxRegisterPrezime = new TextBox();
+            textBoxRegisterIme = new TextBox();
+            labelRegisterIme = new Label();
+            labelRegisterPrezime = new Label();
+            labelRegisterEmail = new Label();
+            labelRegisterPass = new Label();
+            labelImateNalog = new Label();
             SuspendLayout();
             // 
-            // textBoxLoginEmail
+            // textBoxRegisterEmail
             // 
-            textBoxLoginEmail.Location = new Point(320, 119);
-            textBoxLoginEmail.Name = "textBoxLoginEmail";
-            textBoxLoginEmail.Size = new Size(100, 23);
-            textBoxLoginEmail.TabIndex = 0;
+            textBoxRegisterEmail.Location = new Point(320, 119);
+            textBoxRegisterEmail.Name = "textBoxRegisterEmail";
+            textBoxRegisterEmail.Size = new Size(100, 23);
+            textBoxRegisterEmail.TabIndex = 0;
             // 
-            // buttonLoginEmail
+            // buttonRegisterEmail
             // 
-            buttonLoginEmail.Location = new Point(293, 217);
-            buttonLoginEmail.Name = "buttonLoginEmail";
-            buttonLoginEmail.Size = new Size(127, 42);
-            buttonLoginEmail.TabIndex = 1;
-            buttonLoginEmail.Text = "Napravi Nalog";
-            buttonLoginEmail.UseVisualStyleBackColor = true;
-            buttonLoginEmail.Click += buttonLoginEmail_Click;
+            buttonRegisterEmail.Location = new Point(259, 223);
+            buttonRegisterEmail.Name = "buttonRegisterEmail";
+            buttonRegisterEmail.Size = new Size(127, 42);
+            buttonRegisterEmail.TabIndex = 1;
+            buttonRegisterEmail.Text = "Napravi Nalog";
+            buttonRegisterEmail.UseVisualStyleBackColor = true;
+            buttonRegisterEmail.Click += buttonRegisterEmail_Click;
             // 
-            // textBoxLoginPass
+            // textBoxRegisterPass
             // 
-            textBoxLoginPass.Location = new Point(320, 148);
-            textBoxLoginPass.Name = "textBoxLoginPass";
-            textBoxLoginPass.Size = new Size(100, 23);
-            textBoxLoginPass.TabIndex = 2;
+            textBoxRegisterPass.Location = new Point(320, 148);
+            textBoxRegisterPass.Name = "textBoxRegisterPass";
+            textBoxRegisterPass.Size = new Size(100, 23);
+            textBoxRegisterPass.TabIndex = 2;
             // 
-            // textBoxLoginPrezime
+            // textBoxRegisterPrezime
             // 
-            textBoxLoginPrezime.Location = new Point(320, 90);
-            textBoxLoginPrezime.Name = "textBoxLoginPrezime";
-            textBoxLoginPrezime.Size = new Size(100, 23);
-            textBoxLoginPrezime.TabIndex = 3;
+            textBoxRegisterPrezime.Location = new Point(320, 90);
+            textBoxRegisterPrezime.Name = "textBoxRegisterPrezime";
+            textBoxRegisterPrezime.Size = new Size(100, 23);
+            textBoxRegisterPrezime.TabIndex = 3;
             // 
-            // textBoxLoginIme
+            // textBoxRegisterIme
             // 
-            textBoxLoginIme.Location = new Point(320, 61);
-            textBoxLoginIme.Name = "textBoxLoginIme";
-            textBoxLoginIme.Size = new Size(100, 23);
-            textBoxLoginIme.TabIndex = 4;
+            textBoxRegisterIme.Location = new Point(320, 61);
+            textBoxRegisterIme.Name = "textBoxRegisterIme";
+            textBoxRegisterIme.Size = new Size(100, 23);
+            textBoxRegisterIme.TabIndex = 4;
             // 
-            // labelLoginIme
+            // labelRegisterIme
             // 
-            labelLoginIme.AutoSize = true;
-            labelLoginIme.Location = new Point(259, 67);
-            labelLoginIme.Name = "labelLoginIme";
-            labelLoginIme.Size = new Size(30, 15);
-            labelLoginIme.TabIndex = 5;
-            labelLoginIme.Text = "Ime:";
+            labelRegisterIme.AutoSize = true;
+            labelRegisterIme.Location = new Point(259, 67);
+            labelRegisterIme.Name = "labelRegisterIme";
+            labelRegisterIme.Size = new Size(30, 15);
+            labelRegisterIme.TabIndex = 5;
+            labelRegisterIme.Text = "Ime:";
             // 
-            // labelLoginPrezime
+            // labelRegisterPrezime
             // 
-            labelLoginPrezime.AutoSize = true;
-            labelLoginPrezime.Location = new Point(259, 93);
-            labelLoginPrezime.Name = "labelLoginPrezime";
-            labelLoginPrezime.Size = new Size(52, 15);
-            labelLoginPrezime.TabIndex = 6;
-            labelLoginPrezime.Text = "Prezime:";
+            labelRegisterPrezime.AutoSize = true;
+            labelRegisterPrezime.Location = new Point(259, 93);
+            labelRegisterPrezime.Name = "labelRegisterPrezime";
+            labelRegisterPrezime.Size = new Size(52, 15);
+            labelRegisterPrezime.TabIndex = 6;
+            labelRegisterPrezime.Text = "Prezime:";
             // 
-            // labelLoginEmail
+            // labelRegisterEmail
             // 
-            labelLoginEmail.AutoSize = true;
-            labelLoginEmail.Location = new Point(259, 122);
-            labelLoginEmail.Name = "labelLoginEmail";
-            labelLoginEmail.Size = new Size(39, 15);
-            labelLoginEmail.TabIndex = 7;
-            labelLoginEmail.Text = "Email:";
+            labelRegisterEmail.AutoSize = true;
+            labelRegisterEmail.Location = new Point(259, 122);
+            labelRegisterEmail.Name = "labelRegisterEmail";
+            labelRegisterEmail.Size = new Size(39, 15);
+            labelRegisterEmail.TabIndex = 7;
+            labelRegisterEmail.Text = "Email:";
             // 
-            // labelLoginPass
+            // labelRegisterPass
             // 
-            labelLoginPass.AutoSize = true;
-            labelLoginPass.Location = new Point(259, 151);
-            labelLoginPass.Name = "labelLoginPass";
-            labelLoginPass.Size = new Size(50, 15);
-            labelLoginPass.TabIndex = 8;
-            labelLoginPass.Text = "Lozinka:";
+            labelRegisterPass.AutoSize = true;
+            labelRegisterPass.Location = new Point(259, 151);
+            labelRegisterPass.Name = "labelRegisterPass";
+            labelRegisterPass.Size = new Size(50, 15);
+            labelRegisterPass.TabIndex = 8;
+            labelRegisterPass.Text = "Lozinka:";
+            // 
+            // labelImateNalog
+            // 
+            labelImateNalog.AutoSize = true;
+            labelImateNalog.Location = new Point(450, 235);
+            labelImateNalog.Name = "labelImateNalog";
+            labelImateNalog.Size = new Size(75, 30);
+            labelImateNalog.TabIndex = 9;
+            labelImateNalog.Text = "Imate nalog?\r\nUlogujte se";
             // 
             // Pocetna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
-            Controls.Add(labelLoginPass);
-            Controls.Add(labelLoginEmail);
-            Controls.Add(labelLoginPrezime);
-            Controls.Add(labelLoginIme);
-            Controls.Add(textBoxLoginIme);
-            Controls.Add(textBoxLoginPrezime);
-            Controls.Add(textBoxLoginPass);
-            Controls.Add(buttonLoginEmail);
-            Controls.Add(textBoxLoginEmail);
+            Controls.Add(labelImateNalog);
+            Controls.Add(labelRegisterPass);
+            Controls.Add(labelRegisterEmail);
+            Controls.Add(labelRegisterPrezime);
+            Controls.Add(labelRegisterIme);
+            Controls.Add(textBoxRegisterIme);
+            Controls.Add(textBoxRegisterPrezime);
+            Controls.Add(textBoxRegisterPass);
+            Controls.Add(buttonRegisterEmail);
+            Controls.Add(textBoxRegisterEmail);
             Name = "Pocetna";
             Text = "Form1";
             ResumeLayout(false);
@@ -135,14 +147,15 @@
 
         #endregion
 
-        private TextBox textBoxLoginEmail;
-        private Button buttonLoginEmail;
-        private TextBox textBoxLoginPass;
-        private TextBox textBoxLoginPrezime;
-        private TextBox textBoxLoginIme;
-        private Label labelLoginIme;
-        private Label labelLoginPrezime;
-        private Label labelLoginEmail;
-        private Label labelLoginPass;
+        private TextBox textBoxRegisterEmail;
+        private Button buttonRegisterEmail;
+        private TextBox textBoxRegisterPass;
+        private TextBox textBoxRegisterPrezime;
+        private TextBox textBoxRegisterIme;
+        private Label labelRegisterIme;
+        private Label labelRegisterPrezime;
+        private Label labelRegisterEmail;
+        private Label labelRegisterPass;
+        private Label labelImateNalog;
     }
 }
