@@ -17,7 +17,7 @@ namespace OnlineBanking
         {
             InitializeComponent();
         }
-
+        
         private object IzvuciPodatak(string podatak)
         {
             int KorisnikID = LoginInfo.KorisnikID;
