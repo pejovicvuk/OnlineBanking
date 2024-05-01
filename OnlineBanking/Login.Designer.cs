@@ -46,6 +46,7 @@
             // 
             textBoxLoginPass.Location = new Point(309, 139);
             textBoxLoginPass.Name = "textBoxLoginPass";
+            textBoxLoginPass.PasswordChar = '*';
             textBoxLoginPass.Size = new Size(100, 23);
             textBoxLoginPass.TabIndex = 1;
             // 
@@ -88,6 +89,7 @@
             Controls.Add(textBoxLoginPass);
             Controls.Add(textBoxLoginEmail);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();

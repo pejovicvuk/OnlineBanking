@@ -14,6 +14,7 @@ namespace OnlineBanking
     {
         Pocetna pocetna;
         Nalog nalog;
+        Racuni racuni;
 
         public Home()
         {
@@ -61,10 +62,8 @@ namespace OnlineBanking
 
         private void buttonPocetna_Click(object sender, EventArgs e)
         {
-            if(nalog !=null)
-            {
-                nalog.Hide();
-            }
+            nalog?.Hide();
+            racuni?.Hide();
             if (pocetna == null || !pocetna.Visible)
             {
                 pocetna = new Pocetna();
@@ -80,10 +79,8 @@ namespace OnlineBanking
 
         private void buttonNalog_Click(object sender, EventArgs e)
         {
-            if (pocetna != null)
-            {
-                pocetna.Hide();
-            }
+            pocetna?.Hide();
+            racuni?.Hide();
             if (nalog == null || !nalog.Visible)
             {
                 nalog = new Nalog();
@@ -94,6 +91,23 @@ namespace OnlineBanking
             else
             {
                 nalog.Hide();
+            }
+        }
+
+        private void buttonRacuni_Click(object sender, EventArgs e)
+        {
+            pocetna?.Hide();
+            nalog?.Hide();
+            if (racuni == null || !racuni.Visible)
+            {
+                racuni = new Racuni();
+                racuni.MdiParent = this;
+                racuni.Dock = DockStyle.Fill;
+                racuni.Show();
+            }
+            else
+            {
+                racuni.Hide();
             }
         }
     }

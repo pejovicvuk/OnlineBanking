@@ -140,6 +140,7 @@
             Controls.Add(buttonRegister);
             Controls.Add(textBoxRegisterEmail);
             Name = "Register";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
             ResumeLayout(false);
             PerformLayout();

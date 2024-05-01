@@ -29,7 +29,6 @@ namespace OnlineBanking
             if (result != null)
             {
                 LoginInfo.KorisnikID = Convert.ToInt16(result);
-                MessageBox.Show(result.ToString());
                 Home formahome = new Home();
                 this.Hide();
                 formahome.ShowDialog();

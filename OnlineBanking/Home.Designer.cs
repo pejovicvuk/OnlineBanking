@@ -36,7 +36,7 @@
             button4 = new Button();
             button3 = new Button();
             buttonNalog = new Button();
-            button1 = new Button();
+            buttonRacuni = new Button();
             menuTransition = new System.Windows.Forms.Timer(components);
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanelTransakcije.SuspendLayout();
@@ -48,7 +48,7 @@
             flowLayoutPanel1.Controls.Add(buttonPocetna);
             flowLayoutPanel1.Controls.Add(flowLayoutPanelTransakcije);
             flowLayoutPanel1.Controls.Add(buttonNalog);
-            flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Controls.Add(buttonRacuni);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -130,17 +130,18 @@
             buttonNalog.UseVisualStyleBackColor = false;
             buttonNalog.Click += buttonNalog_Click;
             // 
-            // button1
+            // buttonRacuni
             // 
-            button1.BackColor = Color.FromArgb(32, 33, 36);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(3, 152);
-            button1.Name = "button1";
-            button1.Size = new Size(195, 42);
-            button1.TabIndex = 6;
-            button1.Text = "Računi";
-            button1.UseVisualStyleBackColor = false;
+            buttonRacuni.BackColor = Color.FromArgb(32, 33, 36);
+            buttonRacuni.FlatStyle = FlatStyle.Flat;
+            buttonRacuni.ForeColor = SystemColors.Control;
+            buttonRacuni.Location = new Point(3, 152);
+            buttonRacuni.Name = "buttonRacuni";
+            buttonRacuni.Size = new Size(195, 42);
+            buttonRacuni.TabIndex = 6;
+            buttonRacuni.Text = "Računi";
+            buttonRacuni.UseVisualStyleBackColor = false;
+            buttonRacuni.Click += buttonRacuni_Click;
             // 
             // menuTransition
             // 
@@ -156,6 +157,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             IsMdiContainer = true;
             Name = "Home";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Home";
             Load += Home_Load;
             flowLayoutPanel1.ResumeLayout(false);
@@ -173,6 +175,6 @@
         private Button button4;
         private System.Windows.Forms.Timer menuTransition;
         private Button buttonNalog;
-        private Button button1;
+        private Button buttonRacuni;
     }
 }

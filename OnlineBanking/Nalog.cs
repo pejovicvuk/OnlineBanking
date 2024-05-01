@@ -13,11 +13,14 @@ namespace OnlineBanking
 {
     public partial class Nalog : Form
     {
+        Register register = new Register();
+        Home home = new Home();
+
         public Nalog()
         {
             InitializeComponent();
         }
-        
+
         private object IzvuciPodatak(string podatak)
         {
             int KorisnikID = LoginInfo.KorisnikID;
@@ -37,6 +40,26 @@ namespace OnlineBanking
             textBoxNalogPrezime.Text = IzvuciPodatak("Prezime").ToString();
             textBoxNalogEmail.Text = IzvuciPodatak("Email").ToString();
             textBoxNalogSifra.Text = IzvuciPodatak("Sifra").ToString();
+        }
+
+        private void checkBoxViewPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxViewPass.Checked == true)
+            {
+                textBoxNalogSifra.PasswordChar = '\0';
+            }
+            else
+            {
+                textBoxNalogSifra.PasswordChar = '*';
+            }
+        }
+
+        private void buttonNalogLogout_Click(object sender, EventArgs e)
+        {
+            Form home= this.MdiParent;
+            home.Close();
+            LoginInfo.KorisnikID = 0;
+            register.ShowDialog();
         }
     }
 }
