@@ -33,8 +33,8 @@
             buttonPocetna = new Button();
             flowLayoutPanelTransakcije = new FlowLayoutPanel();
             buttonTransakcije = new Button();
-            button4 = new Button();
-            button3 = new Button();
+            buttonPregled = new Button();
+            buttonNovoPlacanje = new Button();
             buttonNalog = new Button();
             buttonRacuni = new Button();
             menuTransition = new System.Windows.Forms.Timer(components);
@@ -72,8 +72,8 @@
             // 
             flowLayoutPanelTransakcije.BackColor = Color.FromArgb(23, 24, 29);
             flowLayoutPanelTransakcije.Controls.Add(buttonTransakcije);
-            flowLayoutPanelTransakcije.Controls.Add(button4);
-            flowLayoutPanelTransakcije.Controls.Add(button3);
+            flowLayoutPanelTransakcije.Controls.Add(buttonPregled);
+            flowLayoutPanelTransakcije.Controls.Add(buttonNovoPlacanje);
             flowLayoutPanelTransakcije.Location = new Point(0, 48);
             flowLayoutPanelTransakcije.Margin = new Padding(0);
             flowLayoutPanelTransakcije.Name = "flowLayoutPanelTransakcije";
@@ -93,29 +93,30 @@
             buttonTransakcije.UseVisualStyleBackColor = false;
             buttonTransakcije.Click += buttonTransakcije_Click;
             // 
-            // button4
+            // buttonPregled
             // 
-            button4.BackColor = Color.FromArgb(32, 33, 36);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.ForeColor = SystemColors.Control;
-            button4.Location = new Point(3, 54);
-            button4.Name = "button4";
-            button4.Size = new Size(195, 45);
-            button4.TabIndex = 5;
-            button4.Text = "Pregled transakcija";
-            button4.UseVisualStyleBackColor = false;
+            buttonPregled.BackColor = Color.FromArgb(32, 33, 36);
+            buttonPregled.FlatStyle = FlatStyle.Flat;
+            buttonPregled.ForeColor = SystemColors.Control;
+            buttonPregled.Location = new Point(3, 54);
+            buttonPregled.Name = "buttonPregled";
+            buttonPregled.Size = new Size(195, 45);
+            buttonPregled.TabIndex = 5;
+            buttonPregled.Text = "Pregled transakcija";
+            buttonPregled.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonNovoPlacanje
             // 
-            button3.BackColor = Color.FromArgb(32, 33, 36);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = SystemColors.Control;
-            button3.Location = new Point(3, 105);
-            button3.Name = "button3";
-            button3.Size = new Size(195, 45);
-            button3.TabIndex = 4;
-            button3.Text = " Novo placanje";
-            button3.UseVisualStyleBackColor = false;
+            buttonNovoPlacanje.BackColor = Color.FromArgb(32, 33, 36);
+            buttonNovoPlacanje.FlatStyle = FlatStyle.Flat;
+            buttonNovoPlacanje.ForeColor = SystemColors.Control;
+            buttonNovoPlacanje.Location = new Point(3, 105);
+            buttonNovoPlacanje.Name = "buttonNovoPlacanje";
+            buttonNovoPlacanje.Size = new Size(195, 45);
+            buttonNovoPlacanje.TabIndex = 4;
+            buttonNovoPlacanje.Text = " Novo placanje";
+            buttonNovoPlacanje.UseVisualStyleBackColor = false;
+            buttonNovoPlacanje.Click += buttonNovoPlacanje_Click;
             // 
             // buttonNalog
             // 
@@ -171,8 +172,8 @@
         private Button buttonPocetna;
         private Button buttonTransakcije;
         private FlowLayoutPanel flowLayoutPanelTransakcije;
-        private Button button3;
-        private Button button4;
+        private Button buttonNovoPlacanje;
+        private Button buttonPregled;
         private System.Windows.Forms.Timer menuTransition;
         private Button buttonNalog;
         private Button buttonRacuni;

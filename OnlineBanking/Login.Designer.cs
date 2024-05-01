@@ -39,7 +39,7 @@
             // 
             textBoxLoginEmail.Location = new Point(309, 91);
             textBoxLoginEmail.Name = "textBoxLoginEmail";
-            textBoxLoginEmail.Size = new Size(100, 23);
+            textBoxLoginEmail.Size = new Size(133, 23);
             textBoxLoginEmail.TabIndex = 0;
             // 
             // textBoxLoginPass
@@ -47,7 +47,7 @@
             textBoxLoginPass.Location = new Point(309, 139);
             textBoxLoginPass.Name = "textBoxLoginPass";
             textBoxLoginPass.PasswordChar = '*';
-            textBoxLoginPass.Size = new Size(100, 23);
+            textBoxLoginPass.Size = new Size(133, 23);
             textBoxLoginPass.TabIndex = 1;
             // 
             // buttonLogin

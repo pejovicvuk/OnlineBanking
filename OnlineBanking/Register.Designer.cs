@@ -43,7 +43,7 @@
             // labelRegisterPass
             // 
             labelRegisterPass.AutoSize = true;
-            labelRegisterPass.Location = new Point(320, 216);
+            labelRegisterPass.Location = new Point(276, 188);
             labelRegisterPass.Name = "labelRegisterPass";
             labelRegisterPass.Size = new Size(50, 15);
             labelRegisterPass.TabIndex = 17;
@@ -52,7 +52,7 @@
             // labelRegisterEmail
             // 
             labelRegisterEmail.AutoSize = true;
-            labelRegisterEmail.Location = new Point(320, 187);
+            labelRegisterEmail.Location = new Point(276, 159);
             labelRegisterEmail.Name = "labelRegisterEmail";
             labelRegisterEmail.Size = new Size(39, 15);
             labelRegisterEmail.TabIndex = 16;
@@ -61,7 +61,7 @@
             // labelRegisterPrezime
             // 
             labelRegisterPrezime.AutoSize = true;
-            labelRegisterPrezime.Location = new Point(320, 158);
+            labelRegisterPrezime.Location = new Point(276, 130);
             labelRegisterPrezime.Name = "labelRegisterPrezime";
             labelRegisterPrezime.Size = new Size(52, 15);
             labelRegisterPrezime.TabIndex = 15;
@@ -70,7 +70,7 @@
             // labelRegisterIme
             // 
             labelRegisterIme.AutoSize = true;
-            labelRegisterIme.Location = new Point(320, 132);
+            labelRegisterIme.Location = new Point(276, 104);
             labelRegisterIme.Name = "labelRegisterIme";
             labelRegisterIme.Size = new Size(30, 15);
             labelRegisterIme.TabIndex = 14;
@@ -78,30 +78,30 @@
             // 
             // textBoxRegisterIme
             // 
-            textBoxRegisterIme.Location = new Point(381, 126);
+            textBoxRegisterIme.Location = new Point(337, 98);
             textBoxRegisterIme.Name = "textBoxRegisterIme";
-            textBoxRegisterIme.Size = new Size(100, 23);
+            textBoxRegisterIme.Size = new Size(124, 23);
             textBoxRegisterIme.TabIndex = 13;
             // 
             // textBoxRegisterPrezime
             // 
-            textBoxRegisterPrezime.Location = new Point(381, 155);
+            textBoxRegisterPrezime.Location = new Point(337, 127);
             textBoxRegisterPrezime.Name = "textBoxRegisterPrezime";
-            textBoxRegisterPrezime.Size = new Size(100, 23);
+            textBoxRegisterPrezime.Size = new Size(124, 23);
             textBoxRegisterPrezime.TabIndex = 12;
             // 
             // textBoxRegisterPass
             // 
-            textBoxRegisterPass.Location = new Point(381, 213);
+            textBoxRegisterPass.Location = new Point(337, 185);
             textBoxRegisterPass.Name = "textBoxRegisterPass";
-            textBoxRegisterPass.Size = new Size(100, 23);
+            textBoxRegisterPass.Size = new Size(124, 23);
             textBoxRegisterPass.TabIndex = 11;
             // 
             // buttonRegister
             // 
-            buttonRegister.Location = new Point(336, 269);
+            buttonRegister.Location = new Point(299, 238);
             buttonRegister.Name = "buttonRegister";
-            buttonRegister.Size = new Size(127, 42);
+            buttonRegister.Size = new Size(162, 42);
             buttonRegister.TabIndex = 10;
             buttonRegister.Text = "Napravi Nalog";
             buttonRegister.UseVisualStyleBackColor = true;
@@ -109,15 +109,15 @@
             // 
             // textBoxRegisterEmail
             // 
-            textBoxRegisterEmail.Location = new Point(381, 184);
+            textBoxRegisterEmail.Location = new Point(337, 156);
             textBoxRegisterEmail.Name = "textBoxRegisterEmail";
-            textBoxRegisterEmail.Size = new Size(100, 23);
+            textBoxRegisterEmail.Size = new Size(124, 23);
             textBoxRegisterEmail.TabIndex = 9;
             // 
             // labelRegister
             // 
             labelRegister.AutoSize = true;
-            labelRegister.Location = new Point(484, 269);
+            labelRegister.Location = new Point(360, 300);
             labelRegister.Name = "labelRegister";
             labelRegister.Size = new Size(78, 30);
             labelRegister.TabIndex = 18;

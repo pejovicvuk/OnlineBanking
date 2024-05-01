@@ -15,7 +15,7 @@ namespace OnlineBanking
         Pocetna pocetna;
         Nalog nalog;
         Racuni racuni;
-
+        NovoPlacanje placanje;
         public Home()
         {
             InitializeComponent();
@@ -64,6 +64,7 @@ namespace OnlineBanking
         {
             nalog?.Hide();
             racuni?.Hide();
+            placanje?.Hide();
             if (pocetna == null || !pocetna.Visible)
             {
                 pocetna = new Pocetna();
@@ -81,6 +82,7 @@ namespace OnlineBanking
         {
             pocetna?.Hide();
             racuni?.Hide();
+            placanje?.Hide();
             if (nalog == null || !nalog.Visible)
             {
                 nalog = new Nalog();
@@ -98,6 +100,7 @@ namespace OnlineBanking
         {
             pocetna?.Hide();
             nalog?.Hide();
+            placanje?.Hide();
             if (racuni == null || !racuni.Visible)
             {
                 racuni = new Racuni();
@@ -108,6 +111,24 @@ namespace OnlineBanking
             else
             {
                 racuni.Hide();
+            }
+        }
+
+        private void buttonNovoPlacanje_Click(object sender, EventArgs e)
+        {
+            pocetna?.Hide();
+            nalog?.Hide();
+            racuni?.Hide();
+            if (placanje == null || !placanje.Visible)
+            {
+                placanje = new NovoPlacanje();
+                placanje.MdiParent = this;
+                placanje    .Dock = DockStyle.Fill;
+                placanje.Show();
+            }
+            else
+            {
+                placanje.Hide();
             }
         }
     }
