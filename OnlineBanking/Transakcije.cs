@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace OnlineBanking
 {
-    public partial class Pocetna : Form
+    public partial class Transakcije : Form
     {
-        public Pocetna()
+        public Transakcije()
         {
             InitializeComponent();
-        }
-
-        private void Pocetna_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

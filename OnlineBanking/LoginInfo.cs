@@ -8,6 +8,6 @@ namespace OnlineBanking
 {
     public static class LoginInfo
     {
-        public static string KorisnikID;
+        public static int KorisnikID;
     }
 }

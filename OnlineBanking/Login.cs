@@ -28,7 +28,7 @@ namespace OnlineBanking
             object result = cmd.ExecuteScalar();
             if (result != null)
             {
-                LoginInfo.KorisnikID = result.ToString();
+                LoginInfo.KorisnikID = Convert.ToInt16(result);
                 MessageBox.Show(result.ToString());
                 Home formahome = new Home();
                 this.Hide();
