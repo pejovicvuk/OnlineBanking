@@ -40,9 +40,9 @@ namespace OnlineBanking
                 cmdInsert.Parameters.Add("@EMail", SqlDbType.VarChar).Value = textBoxRegisterEmail.Text;
                 cmdInsert.Parameters.Add("@Sifra", SqlDbType.VarChar).Value = textBoxRegisterPass.Text;
                 cmdInsert.ExecuteNonQuery();
-                Home formahome = new Home();
+                Login login = new Login();
                 this.Hide();
-                formahome.ShowDialog();
+                login.ShowDialog();
             }
             conn.Close();
         }

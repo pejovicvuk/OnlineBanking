@@ -40,20 +40,28 @@ namespace OnlineBanking
             SqlConnection conn = Konekcija.Connect();
             conn.Open();
 
-            string brojRacuna = comboBoxBankomat.SelectedItem.ToString();
-            string selectQuery = $"SELECT Stanje FROM Racun WHERE Broj_Racuna = @BrojRacuna";
-            SqlCommand selectCmd = new SqlCommand(selectQuery, conn);
-            selectCmd.Parameters.AddWithValue("@BrojRacuna", brojRacuna);
-            decimal currentStanje = Convert.ToDecimal(selectCmd.ExecuteScalar());
+            if(comboBoxBankomat.SelectedItem == null)
+            {
+                MessageBox.Show("Izaberi ili napravi novi racun");
+                conn.Close();
+            }
+            else
+            {
+                string brojRacuna = comboBoxBankomat.SelectedItem.ToString();
+                string selectQuery = $"SELECT Stanje FROM Racun WHERE Broj_Racuna = @BrojRacuna";
+                SqlCommand selectCmd = new SqlCommand(selectQuery, conn);
+                selectCmd.Parameters.AddWithValue("@BrojRacuna", brojRacuna);
+                decimal currentStanje = Convert.ToDecimal(selectCmd.ExecuteScalar());
 
-            decimal novoStanje = currentStanje + koliko;
+                decimal novoStanje = currentStanje + koliko;
 
-            string updateQuery = $"UPDATE Racun SET Stanje = @NovoStanje WHERE Broj_Racuna = @BrojRacuna";
-            SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
-            updateCmd.Parameters.AddWithValue("@NovoStanje", novoStanje);
-            updateCmd.Parameters.AddWithValue("@BrojRacuna", brojRacuna);
-            updateCmd.ExecuteNonQuery();
-            conn.Close();
+                string updateQuery = $"UPDATE Racun SET Stanje = @NovoStanje WHERE Broj_Racuna = @BrojRacuna";
+                SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
+                updateCmd.Parameters.AddWithValue("@NovoStanje", novoStanje);
+                updateCmd.Parameters.AddWithValue("@BrojRacuna", brojRacuna);
+                updateCmd.ExecuteNonQuery();
+                conn.Close();
+            }          
         }
 
         private void Pocetna_Load(object sender, EventArgs e)
@@ -82,22 +90,24 @@ namespace OnlineBanking
         private void KreirajTransakcijuBankomat()
         {
             decimal iznos = Convert.ToDecimal(textBoxKoliko.Text);
-            string brojPrimaoca = comboBoxBankomat.SelectedItem.ToString();
-
-            using (SqlConnection conn = Konekcija.Connect())
+            
+            if (comboBoxBankomat.SelectedItem != null)
             {
+                SqlConnection conn = Konekcija.Connect();
                 conn.Open();
+                string brojPrimaoca = comboBoxBankomat.SelectedItem.ToString();
                 SqlCommand cmdInsert = new SqlCommand("Transakcija_Insert", conn);
                 cmdInsert.CommandType = CommandType.StoredProcedure;
 
                 cmdInsert.Parameters.AddWithValue("@Iznos", iznos);
                 cmdInsert.Parameters.AddWithValue("@broj_platioca", "0");
                 cmdInsert.Parameters.AddWithValue("@broj_primaoca", brojPrimaoca);
-                cmdInsert.Parameters.AddWithValue("@Id_Tip_Transakcije", 1); 
+                cmdInsert.Parameters.AddWithValue("@Id_Tip_Transakcije", 1);
 
                 cmdInsert.ExecuteNonQuery();
                 conn.Close();
             }
+            
         }
 
         private void buttonDeposit_Click(object sender, EventArgs e)
