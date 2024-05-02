@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "PregledTransakcija";
+            dataGridViewTransakcije = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTransakcije).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridViewTransakcije
+            // 
+            dataGridViewTransakcije.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTransakcije.Location = new Point(254, 120);
+            dataGridViewTransakcije.Name = "dataGridViewTransakcije";
+            dataGridViewTransakcije.Size = new Size(287, 150);
+            dataGridViewTransakcije.TabIndex = 0;
+            // 
+            // PregledTransakcija
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataGridViewTransakcije);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "PregledTransakcija";
+            Text = "PregledTransakcija";
+            Load += PregledTransakcija_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTransakcije).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridViewTransakcije;
     }
 }

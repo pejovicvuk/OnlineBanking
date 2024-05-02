@@ -104,6 +104,7 @@
             buttonPregled.TabIndex = 5;
             buttonPregled.Text = "Pregled transakcija";
             buttonPregled.UseVisualStyleBackColor = false;
+            buttonPregled.Click += buttonPregled_Click;
             // 
             // buttonNovoPlacanje
             // 

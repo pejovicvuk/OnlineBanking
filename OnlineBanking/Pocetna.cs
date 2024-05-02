@@ -19,8 +19,9 @@ namespace OnlineBanking
             InitializeComponent();
         }
 
-        private int UkupnoStanje()
+        private decimal UkupnoStanje()
         {
+            decimal ukupno = 0;
             int KorisnikID = LoginInfo.KorisnikID;
             SqlConnection conn = Konekcija.Connect();
             conn.Open();
@@ -28,7 +29,10 @@ namespace OnlineBanking
             SqlCommand cmdSum = new SqlCommand(querySum, conn);
             cmdSum.Parameters.AddWithValue("@KorisnikID", KorisnikID);
             object result = cmdSum.ExecuteScalar();
-            int ukupno = Convert.ToInt32(result);
+            if (result == DBNull.Value)
+                ukupno = 0;
+            else
+                ukupno = Convert.ToDecimal(result);
             return ukupno;
         }
         private void PovecajStanje(decimal koliko)
@@ -75,10 +79,32 @@ namespace OnlineBanking
             conn.Close();
         }
 
+        private void KreirajTransakcijuBankomat()
+        {
+            decimal iznos = Convert.ToDecimal(textBoxKoliko.Text);
+            string brojPrimaoca = comboBoxBankomat.SelectedItem.ToString();
+
+            using (SqlConnection conn = Konekcija.Connect())
+            {
+                conn.Open();
+                SqlCommand cmdInsert = new SqlCommand("Transakcija_Insert", conn);
+                cmdInsert.CommandType = CommandType.StoredProcedure;
+
+                cmdInsert.Parameters.AddWithValue("@Iznos", iznos);
+                cmdInsert.Parameters.AddWithValue("@broj_platioca", "0");
+                cmdInsert.Parameters.AddWithValue("@broj_primaoca", brojPrimaoca);
+                cmdInsert.Parameters.AddWithValue("@Id_Tip_Transakcije", 1); 
+
+                cmdInsert.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+
         private void buttonDeposit_Click(object sender, EventArgs e)
         {
             PovecajStanje(Convert.ToInt32(textBoxKoliko.Text));
             textBoxStanje.Text = UkupnoStanje().ToString();
+            KreirajTransakcijuBankomat();
         }
     }
 }

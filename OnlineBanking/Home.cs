@@ -16,6 +16,7 @@ namespace OnlineBanking
         Nalog nalog;
         Racuni racuni;
         NovoPlacanje placanje;
+        PregledTransakcija pregled;
         public Home()
         {
             InitializeComponent();
@@ -65,6 +66,7 @@ namespace OnlineBanking
             nalog?.Hide();
             racuni?.Hide();
             placanje?.Hide();
+            pregled?.Hide();
             if (pocetna == null || !pocetna.Visible)
             {
                 pocetna = new Pocetna();
@@ -83,6 +85,7 @@ namespace OnlineBanking
             pocetna?.Hide();
             racuni?.Hide();
             placanje?.Hide();
+            pregled?.Hide();
             if (nalog == null || !nalog.Visible)
             {
                 nalog = new Nalog();
@@ -101,6 +104,7 @@ namespace OnlineBanking
             pocetna?.Hide();
             nalog?.Hide();
             placanje?.Hide();
+            pregled?.Hide();
             if (racuni == null || !racuni.Visible)
             {
                 racuni = new Racuni();
@@ -119,16 +123,37 @@ namespace OnlineBanking
             pocetna?.Hide();
             nalog?.Hide();
             racuni?.Hide();
+            pregled?.Hide();
             if (placanje == null || !placanje.Visible)
             {
                 placanje = new NovoPlacanje();
                 placanje.MdiParent = this;
-                placanje    .Dock = DockStyle.Fill;
+                placanje.Dock = DockStyle.Fill;
                 placanje.Show();
             }
             else
             {
                 placanje.Hide();
+            }
+        }
+
+        private void buttonPregled_Click(object sender, EventArgs e)
+        {
+            pocetna?.Hide();
+            nalog?.Hide();
+            racuni?.Hide();
+            placanje?.Hide();
+
+            if (pregled == null || !pregled.Visible)
+            {
+                pregled = new PregledTransakcija();
+                pregled.MdiParent = this;
+                pregled.Dock = DockStyle.Fill;
+                pregled.Show();
+            }
+            else
+            {
+                pregled.Hide();
             }
         }
     }
