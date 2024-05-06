@@ -106,8 +106,7 @@ namespace OnlineBanking
 
                 cmdInsert.ExecuteNonQuery();
                 conn.Close();
-            }
-            
+            }           
         }
 
         private void buttonDeposit_Click(object sender, EventArgs e)
