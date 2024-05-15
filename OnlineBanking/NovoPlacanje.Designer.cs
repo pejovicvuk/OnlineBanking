@@ -28,7 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            comboBoxPlacanje = new ComboBox();
+            textBoxPrimaoc = new TextBox();
+            textBoxPlacanjeSuma = new TextBox();
+            buttonUplati = new Button();
             SuspendLayout();
+            // 
+            // comboBoxPlacanje
+            // 
+            comboBoxPlacanje.FormattingEnabled = true;
+            comboBoxPlacanje.Location = new Point(77, 80);
+            comboBoxPlacanje.Name = "comboBoxPlacanje";
+            comboBoxPlacanje.Size = new Size(198, 23);
+            comboBoxPlacanje.TabIndex = 0;
+            // 
+            // textBoxPrimaoc
+            // 
+            textBoxPrimaoc.Location = new Point(301, 80);
+            textBoxPrimaoc.Name = "textBoxPrimaoc";
+            textBoxPrimaoc.Size = new Size(100, 23);
+            textBoxPrimaoc.TabIndex = 1;
+            // 
+            // textBoxPlacanjeSuma
+            // 
+            textBoxPlacanjeSuma.Location = new Point(435, 80);
+            textBoxPlacanjeSuma.Name = "textBoxPlacanjeSuma";
+            textBoxPlacanjeSuma.Size = new Size(100, 23);
+            textBoxPlacanjeSuma.TabIndex = 2;
+            // 
+            // buttonUplati
+            // 
+            buttonUplati.Location = new Point(287, 153);
+            buttonUplati.Name = "buttonUplati";
+            buttonUplati.Size = new Size(126, 43);
+            buttonUplati.TabIndex = 3;
+            buttonUplati.Text = "Izvrsi uplatu";
+            buttonUplati.UseVisualStyleBackColor = true;
+            buttonUplati.Click += buttonUplati_Click;
             // 
             // NovoPlacanje
             // 
@@ -36,12 +72,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonUplati);
+            Controls.Add(textBoxPlacanjeSuma);
+            Controls.Add(textBoxPrimaoc);
+            Controls.Add(comboBoxPlacanje);
             FormBorderStyle = FormBorderStyle.None;
             Name = "NovoPlacanje";
             Text = "NovoPlacanje";
+            Load += NovoPlacanje_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ComboBox comboBoxPlacanje;
+        private TextBox textBoxPrimaoc;
+        private TextBox textBoxPlacanjeSuma;
+        private Button buttonUplati;
     }
 }
