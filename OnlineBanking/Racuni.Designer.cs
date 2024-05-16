@@ -62,16 +62,16 @@
             // dataGridViewRacuni
             // 
             dataGridViewRacuni.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewRacuni.Location = new Point(181, 56);
+            dataGridViewRacuni.Location = new Point(128, 55);
             dataGridViewRacuni.Name = "dataGridViewRacuni";
-            dataGridViewRacuni.Size = new Size(428, 185);
+            dataGridViewRacuni.Size = new Size(535, 206);
             dataGridViewRacuni.TabIndex = 1;
             // 
             // buttonKreirajRacun
             // 
-            buttonKreirajRacun.Location = new Point(196, 288);
+            buttonKreirajRacun.Location = new Point(307, 297);
             buttonKreirajRacun.Name = "buttonKreirajRacun";
-            buttonKreirajRacun.Size = new Size(116, 23);
+            buttonKreirajRacun.Size = new Size(154, 42);
             buttonKreirajRacun.TabIndex = 2;
             buttonKreirajRacun.Text = "Kreiraj Racun";
             buttonKreirajRacun.UseVisualStyleBackColor = true;

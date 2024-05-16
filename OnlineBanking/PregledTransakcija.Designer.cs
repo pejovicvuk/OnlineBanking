@@ -35,9 +35,9 @@
             // dataGridViewTransakcije
             // 
             dataGridViewTransakcije.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTransakcije.Location = new Point(254, 120);
+            dataGridViewTransakcije.Location = new Point(97, 71);
             dataGridViewTransakcije.Name = "dataGridViewTransakcije";
-            dataGridViewTransakcije.Size = new Size(287, 150);
+            dataGridViewTransakcije.Size = new Size(555, 294);
             dataGridViewTransakcije.TabIndex = 0;
             // 
             // PregledTransakcija

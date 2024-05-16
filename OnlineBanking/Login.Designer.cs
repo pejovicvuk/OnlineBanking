@@ -37,14 +37,14 @@
             // 
             // textBoxLoginEmail
             // 
-            textBoxLoginEmail.Location = new Point(309, 91);
+            textBoxLoginEmail.Location = new Point(309, 112);
             textBoxLoginEmail.Name = "textBoxLoginEmail";
             textBoxLoginEmail.Size = new Size(133, 23);
             textBoxLoginEmail.TabIndex = 0;
             // 
             // textBoxLoginPass
             // 
-            textBoxLoginPass.Location = new Point(309, 139);
+            textBoxLoginPass.Location = new Point(309, 160);
             textBoxLoginPass.Name = "textBoxLoginPass";
             textBoxLoginPass.PasswordChar = '*';
             textBoxLoginPass.Size = new Size(133, 23);
@@ -52,29 +52,34 @@
             // 
             // buttonLogin
             // 
-            buttonLogin.Location = new Point(309, 215);
+            buttonLogin.BackColor = Color.FromArgb(254, 226, 113);
+            buttonLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonLogin.ForeColor = Color.FromArgb(23, 24, 29);
+            buttonLogin.Location = new Point(309, 221);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(133, 48);
             buttonLogin.TabIndex = 2;
             buttonLogin.Text = "Uloguj Se";
-            buttonLogin.UseVisualStyleBackColor = true;
+            buttonLogin.UseVisualStyleBackColor = false;
             buttonLogin.Click += buttonLogin_Click;
             // 
             // labelLoginEmail
             // 
             labelLoginEmail.AutoSize = true;
-            labelLoginEmail.Location = new Point(250, 94);
+            labelLoginEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelLoginEmail.Location = new Point(235, 114);
             labelLoginEmail.Name = "labelLoginEmail";
-            labelLoginEmail.Size = new Size(36, 15);
+            labelLoginEmail.Size = new Size(48, 21);
             labelLoginEmail.TabIndex = 3;
             labelLoginEmail.Text = "Email";
             // 
             // labelLoginPass
             // 
             labelLoginPass.AutoSize = true;
-            labelLoginPass.Location = new Point(250, 142);
+            labelLoginPass.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelLoginPass.Location = new Point(235, 160);
             labelLoginPass.Name = "labelLoginPass";
-            labelLoginPass.Size = new Size(47, 15);
+            labelLoginPass.Size = new Size(63, 21);
             labelLoginPass.TabIndex = 4;
             labelLoginPass.Text = "Lozinka";
             // 

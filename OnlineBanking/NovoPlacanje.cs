@@ -42,15 +42,27 @@ namespace OnlineBanking
 
             using (SqlConnection conn = Konekcija.Connect())
             {
-                //provera jel ima dovoljno para na kartici
-
                 conn.Open();
+
+                string query = "SELECT Stanje FROM Racun where Broj_Racuna = @BrojRacuna";
+                using (SqlCommand proveraCmd = new SqlCommand(query, conn))
+                {
+                    proveraCmd.Parameters.AddWithValue("@BrojRacuna", comboBoxPlacanje.SelectedItem.ToString());
+                    decimal stanjeRacun = Convert.ToDecimal(proveraCmd.ExecuteScalar());
+
+                    if(stanjeRacun < Convert.ToDecimal(textBoxPlacanjeSuma.Text))
+                    {
+                        MessageBox.Show("Nemate dovoljno para na racunu");
+                        return;
+                    }
+                }
                 
                 if (comboBoxPlacanje.SelectedItem.ToString() == "")
                 {
                     MessageBox.Show("Odaberi/Napravi racun");
                     return;
                 }
+
                 string brojRacunaPlatioc = comboBoxPlacanje.SelectedItem.ToString();
                 string brojRacunaPrimaoc = textBoxPrimaoc.Text;
                 string oduzmiQuery = "UPDATE Racun SET Stanje = Stanje - @TransakcijaSuma WHERE Broj_Racuna = @BrojRacunaPlatioc";
@@ -75,7 +87,7 @@ namespace OnlineBanking
 
                     cmdInsert.Parameters.AddWithValue("@Iznos", Convert.ToDecimal(textBoxPlacanjeSuma.Text));
                     cmdInsert.Parameters.AddWithValue("@broj_platioca", brojRacunaPlatioc);
-                    cmdInsert.Parameters.AddWithValue("@broj_primaoca", brojRacunaPlatioc);
+                    cmdInsert.Parameters.AddWithValue("@broj_primaoca", brojRacunaPrimaoc);
                     cmdInsert.Parameters.AddWithValue("@Id_Tip_Transakcije", 2);
                     cmdInsert.ExecuteNonQuery();
                 }

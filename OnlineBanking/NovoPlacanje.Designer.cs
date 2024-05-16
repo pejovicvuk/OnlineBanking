@@ -32,6 +32,8 @@
             textBoxPrimaoc = new TextBox();
             textBoxPlacanjeSuma = new TextBox();
             buttonUplati = new Button();
+            labelPrimaoc = new Label();
+            labelSumaPlacanje = new Label();
             SuspendLayout();
             // 
             // comboBoxPlacanje
@@ -66,12 +68,32 @@
             buttonUplati.UseVisualStyleBackColor = true;
             buttonUplati.Click += buttonUplati_Click;
             // 
+            // labelPrimaoc
+            // 
+            labelPrimaoc.AutoSize = true;
+            labelPrimaoc.Location = new Point(301, 51);
+            labelPrimaoc.Name = "labelPrimaoc";
+            labelPrimaoc.Size = new Size(96, 15);
+            labelPrimaoc.TabIndex = 4;
+            labelPrimaoc.Text = "Racun Primaoca:";
+            // 
+            // labelSumaPlacanje
+            // 
+            labelSumaPlacanje.AutoSize = true;
+            labelSumaPlacanje.Location = new Point(435, 51);
+            labelSumaPlacanje.Name = "labelSumaPlacanje";
+            labelSumaPlacanje.Size = new Size(40, 15);
+            labelSumaPlacanje.TabIndex = 5;
+            labelSumaPlacanje.Text = "Suma:";
+            // 
             // NovoPlacanje
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelSumaPlacanje);
+            Controls.Add(labelPrimaoc);
             Controls.Add(buttonUplati);
             Controls.Add(textBoxPlacanjeSuma);
             Controls.Add(textBoxPrimaoc);
@@ -90,5 +112,7 @@
         private TextBox textBoxPrimaoc;
         private TextBox textBoxPlacanjeSuma;
         private Button buttonUplati;
+        private Label labelPrimaoc;
+        private Label labelSumaPlacanje;
     }
 }

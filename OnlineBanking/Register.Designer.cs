@@ -99,12 +99,13 @@
             // 
             // buttonRegister
             // 
+            buttonRegister.BackColor = Color.FromArgb(254, 226, 113);
             buttonRegister.Location = new Point(299, 238);
             buttonRegister.Name = "buttonRegister";
             buttonRegister.Size = new Size(162, 42);
             buttonRegister.TabIndex = 10;
             buttonRegister.Text = "Napravi Nalog";
-            buttonRegister.UseVisualStyleBackColor = true;
+            buttonRegister.UseVisualStyleBackColor = false;
             buttonRegister.Click += buttonRegister_Click;
             // 
             // textBoxRegisterEmail
@@ -117,9 +118,10 @@
             // labelRegister
             // 
             labelRegister.AutoSize = true;
-            labelRegister.Location = new Point(360, 300);
+            labelRegister.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelRegister.Location = new Point(337, 302);
             labelRegister.Name = "labelRegister";
-            labelRegister.Size = new Size(78, 30);
+            labelRegister.Size = new Size(87, 34);
             labelRegister.TabIndex = 18;
             labelRegister.Text = "Imate nalog? \r\nUlogujte se";
             labelRegister.Click += labelRegister_Click;
